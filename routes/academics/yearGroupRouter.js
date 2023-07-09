@@ -13,7 +13,10 @@ const {
 
 const yearGroupRouter = express.Router();
 
-yearGroupRouter.route("/").post(createYearGroup).get(getYearGroups);
+yearGroupRouter
+  .route("/", isAuthenticated(Admin), roleRestriction("admin"))
+  .post(createYearGroup)
+  .get(getYearGroups);
 yearGroupRouter
   .route("/:id", isAuthenticated(Admin), roleRestriction("admin"))
   .get(getSingleYearGroup)
