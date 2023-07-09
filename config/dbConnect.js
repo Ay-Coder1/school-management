@@ -7,5 +7,6 @@ const dbConnect = async () => {
     console.log("DB connection failed", error.message);
   }
 };
+//database connection
 
 dbConnect();
