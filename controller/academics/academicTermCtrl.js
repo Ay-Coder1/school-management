@@ -4,7 +4,7 @@ const AcademicTerm = require("../../model/Academic/AcademicTerm");
 const Admin = require("../../model/Staff/Admin");
 
 //@desc Create Academic Term
-//@route POST /api/v1/academic-terms
+//@route POST /api/v1/academicTerm
 //@access Private
 exports.createAcademicTerm = AsyncHandler(async (req, res) => {
   const { name, description, duration } = req.body;
