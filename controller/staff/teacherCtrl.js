@@ -129,6 +129,8 @@ exports.teacherUpdateProfile = AsyncHandler(async (req, res) => {
         email,
         password: await hashPassword(password),
         name,
+        
+
       },
       {
         new: true,
@@ -146,6 +148,7 @@ exports.teacherUpdateProfile = AsyncHandler(async (req, res) => {
       req.userAuth._id,
       {
         email,
+        // password:has
         name,
       },
       {
